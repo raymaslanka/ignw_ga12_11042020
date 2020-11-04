@@ -37,7 +37,9 @@ jobs:
         pytest
         
   fun_job:
+    
     runs-on: ubuntu-latest
+    
     steps:
       - name: install libraries
           run: sudo apt-get install fortune cowsay
