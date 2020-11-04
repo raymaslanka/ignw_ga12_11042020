@@ -33,4 +33,19 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
+  
         pytest
+        
+  fun_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install libraries
+          run: sudo apt-get install fortune cowsay
+      - name: Cow Say Moo
+          run: cowsay "hello, I'm a cow"
+      - name: Format a quote
+          run: fortune | cowsay
+      - name: Cowsay options
+          run: |
+            fortune | cowsay -f tux
+            fortune | cowsay -f
